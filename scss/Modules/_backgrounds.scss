@@ -1,0 +1,19 @@
+// --------------------------------------------------------------------------
+// Backgrounds --------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.background-image {
+    background-image: url("../img/background.jpg"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-size: cover;
+    border-bottom: 2px solid $canary-wharf;
+    background-attachment: fixed;
+}
+
+
+body {
+    background-color: lighten($grey, 15%);
+}

@@ -1,0 +1,63 @@
+// --------------------------------------------------------------------------
+// Global configuration -----------------------------------------------------
+// --------------------------------------------------------------------------
+
+//fonts
+
+$font-url--google        : 'https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&family=Poppins:wght@300;400;700;900&display=swap';
+$font-family--primary    : 'Mulish', sans-serif;
+$font-family--secondary  :  sans-serif;
+$font-family--icon       :  '../fonts/IconMoon-Free.ttf';
+
+// Font Weights
+
+$font-weight--thin       : 300;
+$font-weight--light      : 400;
+$font-weight--medium     : 500;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+
+// Text
+
+$font-size--xsmall:10px;
+$font-size--small: 13px;
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Base colors
+
+$canary-wharf    :    #92A1B3;
+$cream           :    #FEFBEA;
+$dark-cream :darken($cream, 20%);
+$white           :       #FFF;
+$grey        :rgba(0,0,0,0.1);
+$dark-grey       :    #999AA2;
+$midnight        :    #333645;
+
+//color usage
+
+$color-primary   :$canary-wharf;
+$color-secondary :       $cream;
+
+// //Theme Colors
+
+// $theme-colors: (
+//     software: $rackley,
+//     it-support: $tufts-blue,
+//     dig-marketing: $ufo-green,
+//     tel-services: $jasper,
+//     web-design: $purple-majesty,
+//     cyber-security: $awesome,
+//     dev-course: $dark-pastel-red,
+// );
+
+// Breakpoints
+
+$brkpoint-sm:  1px;
+$brkpoint-md:  576px;
+$brkpoint-lg:  768px;
+$brkpoint-xlg: 992px;
+$brkpoint-xxlg: 1200px;
+

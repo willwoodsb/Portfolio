@@ -1,0 +1,50 @@
+// --------------------------------------------------------------------------
+// Main Menu ----------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.popout-menu {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    border-right: 2px solid $canary-wharf;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 10px 40px;
+}
+
+.body {
+    @include flex-row;
+    justify-content: center;
+    &__item:first-child {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        @media screen and (max-width: ($brkpoint-lg - 1)) {
+            width: 0;
+        }
+    }
+    &__item:last-child {
+        flex-grow: 1;
+    }
+}
+
+.home  {
+    font-size: em(30px);
+    color: $midnight;
+    font-weight: $font-weight--ultra-bold;
+    &:hover {
+        color: lighten($midnight, 10%);
+    }
+}
+
+hr {
+    height: 2px;
+    background: $midnight;
+    width: 80px;
+    margin-top: 40px;
+}
+

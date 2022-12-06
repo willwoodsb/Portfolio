@@ -1,0 +1,22 @@
+// --------------------------------------------------------------------------
+// Collapsed ----------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.is-visible-large-screen {
+  @media screen and (max-width: ($brkpoint-lg - 1)) {
+    @include collapse;
+    transition: width ease .5s;
+  }
+  @media screen and (min-width: $brkpoint-lg) {
+    transition: width ease .5s;
+  }
+}
+
+.is-collapsed-large-screen {
+  @media screen and (min-width: ($brkpoint-lg - 1)) {
+    @include collapse;
+  }
+  @media screen and (max-width: $brkpoint-lg) {
+    transition-delay: .5s;
+  }
+}

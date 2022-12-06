@@ -1,0 +1,63 @@
+// --------------------------------------------------------------------------
+// Portfolio ----------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.portfolio {
+    padding: 70px 0 40px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    &__item {
+        color: $midnight;
+        .padded {
+            padding: 10px 0 25px;
+        }
+        img {
+            transition: ease .5s;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 2px $dark-grey;
+        }
+        &:hover {
+            img {
+                transform: translate(0, -10px);
+            }
+            
+        }
+        .view-link {
+            color: $midnight;
+            @include flex-row;
+            font-weight: $font-weight--medium;
+            p:hover {
+                text-decoration: underline;
+            }
+            span {
+                @include auto-mg-ver;
+                margin-left: 5px;
+                &::after {
+                    content: "\ea3c";
+                }
+            }
+        }
+    }
+}
+
+//media queries
+
+@include mq(x-large) {
+    .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+        &__item:nth-child(3n + 1) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item:nth-child(3n + 2) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__item:nth-child(3n + 3) {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+    }
+}

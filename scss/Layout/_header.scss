@@ -1,0 +1,35 @@
+// --------------------------------------------------------------------------
+// Backgrounds --------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.title-section {
+    height: 100vh;
+    color: $white;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    @include flex-col;
+    padding-top: 30vh;
+    transition: ease .5s;
+    h1 {
+        margin-bottom: 20px;
+    }
+    .scroll {
+        font-size: em(26px);
+        display: block;
+        color: $white;
+        span::after {
+            content: "\ea43";
+        }
+        margin: auto 0 30px;
+        &:hover {
+            color: $dark-cream;
+        }
+    }
+}
+
+@include mq(large) {
+    .title-section {
+        padding-top: 35vh;
+    }
+}
+
