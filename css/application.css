@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&family=Poppins:wght@300;400;700;900&display=swap");
+.popout-menu__item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -281,12 +287,48 @@ h3 {
       grid-column-end: 4; } }
 .popout-menu {
   position: fixed;
-  width: 150px;
+  width: 175px;
   height: 100%;
-  border-right: 2px solid #92A1B3;
+  border-right: 2px solid #333645;
   z-index: 2;
   text-align: center;
   padding: 40px 10px 40px; }
+  .popout-menu__item {
+    color: #333645; }
+    .popout-menu__item:not(hr) {
+      margin: 20px 0 20px; }
+    @media screen and (min-width: 768px) {
+      .popout-menu__item {
+        transition-delay: .5s; } }
+    .popout-menu__item:nth-child(2) {
+      margin-top: 40px;
+      margin-bottom: 100px; }
+    .popout-menu__item:nth-child(7) {
+      margin-top: 50px; }
+    .popout-menu__item:not(:last-child) a {
+      color: #333645;
+      font-weight: 700; }
+      .popout-menu__item:not(:last-child) a:hover {
+        text-decoration: underline; }
+    .popout-menu__item:last-child {
+      margin-top: 25px; }
+      .popout-menu__item:last-child div {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative; }
+        .popout-menu__item:last-child div:hover {
+          background-color: #333645; }
+          .popout-menu__item:last-child div:hover span {
+            color: white; }
+    .popout-menu__item span {
+      color: #333645; }
+      .popout-menu__item span::after {
+        content: "\eaca"; }
+    .popout-menu__item #contact {
+      font-weight: 900; }
 
 .body {
   display: flex;
@@ -296,7 +338,7 @@ h3 {
     position: relative;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 175px;
     height: 100%;
     flex-grow: 0;
     flex-shrink: 0; }
@@ -308,16 +350,12 @@ h3 {
 
 .home {
   font-size: 1.875em;
-  color: #333645;
   font-weight: 900; }
-  .home:hover {
-    color: #494d62; }
 
 hr {
   height: 2px;
   background: #333645;
-  width: 80px;
-  margin-top: 40px; }
+  width: 80px; }
 
 .background-image {
   background-image: url("../img/background.jpg"), linear-gradient(to bottom, #5c6e83, #ced5dd);
@@ -326,7 +364,7 @@ hr {
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
-  border-bottom: 2px solid #92A1B3;
+  border-bottom: 2px solid #333645;
   background-attachment: fixed; }
 
 body {

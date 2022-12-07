@@ -13,18 +13,29 @@
       <div><span class="icon"></span></div>
     </a>
     
+    <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
     <div class="body">
       <!-- Main menu -->
       <section class="body__item is-visible-large-screen">
         <div class="popout-menu white is-visible-large-screen">
-          <a href="#home" class="home">
-            <span>WWB</span>
-          </a>
-          <hr></hr>
+          <a href="#home" class="home popout-menu__item">WWB</a>
+          <hr class="popout-menu__item"></hr>
+          <div class="popout-menu__item"><a href="#">About Me</a></div>
+          <div class="popout-menu__item"><a href="#">My Portfolio</a></div>
+          <div class="popout-menu__item"><a href="#">Coding Examples</a></div>
+          <div class="popout-menu__item"><a href="#">SCS Scheme</a></div>
+          <hr class="popout-menu__item"></hr>
+          <div class="popout-menu__item" ><a href="#"><div id="contact">Contact Me</div></a></div>
+          <hr class="popout-menu__item"></hr>
+          <div class="popout-menu__item"><a href="#"><div><span class="icon"></span></div></a></div>
+
         </div>
       </section>
 
+      <!-- Content div -->
       <div class="body__item">
+
+        <!-- Header -->
         <header class="background-image">
           <!-- Main title section -->
           <section class="title-section width">
@@ -40,6 +51,7 @@
 
         </header>
 
+        <!-- Main -->
         <main class="white">
           <!-- Main content -->
           <section id="portfolio" class="portfolio width">
@@ -86,6 +98,26 @@
               </div>
             </a>
           </section>
+
+          <!-- Contact Form -->
+          <section class="width form">
+            <div class="form__col">
+              <h2>Get In Touch</h2>
+              <p>Please contact me via the form, I will be happy to recieve your message and get back to you as soon as possible!</p>
+              <h3>07741 487037</h3>
+              <h3>willwoodsb@gmail.com</h3>
+            </div>
+            <div class="form__col">
+              <form action="" method="post">
+                <input type="text" id="fname" name="fname" placeholder="First Name">
+                <input type="text" id="lname" name="lname" placeholder="Last Name">
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <textarea id="message" name="message">Message</textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </section>
+
         </main>
 
         <footer>

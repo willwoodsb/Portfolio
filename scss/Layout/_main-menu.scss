@@ -4,12 +4,63 @@
 
 .popout-menu {
     position: fixed;
-    width: 150px;
+    width: 175px;
     height: 100%;
-    border-right: 2px solid $canary-wharf;
+    border-right: 2px solid $midnight;
     z-index: 2;
     text-align: center;
     padding: 40px 10px 40px;
+    &__item {
+        color: $midnight;
+        &:not(hr) {
+            margin: 20px 0 20px;
+        }
+        @media screen and (min-width: $brkpoint-lg) {
+            transition-delay: .5s;
+        }
+        &:nth-child(2) {
+            margin-top: 40px;
+            margin-bottom: 100px;
+        }
+        &:nth-child(7) {
+            margin-top: 50px;
+        }
+        &:not(:last-child) {
+            a {
+                color:$midnight;
+                font-weight: $font-weight--bold;
+                &:hover {
+                    text-decoration: underline;
+                }
+            } 
+        }
+        &:last-child {
+            margin-top: 25px;
+            div {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                @include auto-mg-hor;
+                position: relative;
+                &:hover {
+                    background-color: $midnight;
+                    span {
+                        color: white
+                    }
+                }  
+            } 
+        }
+        span {
+            @extend %img-center;
+            color: $midnight;
+            &::after {
+                content: "\eaca";
+            }
+        }
+        #contact {
+            font-weight: $font-weight--ultra-bold;
+        }
+    }
 }
 
 .body {
@@ -19,7 +70,7 @@
         position: relative;
         top: 0;
         left: 0;
-        width: 150px;
+        width: 175px;
         height: 100%;
         flex-grow: 0;
         flex-shrink: 0;
@@ -34,17 +85,12 @@
 
 .home  {
     font-size: em(30px);
-    color: $midnight;
     font-weight: $font-weight--ultra-bold;
-    &:hover {
-        color: lighten($midnight, 10%);
-    }
 }
 
 hr {
     height: 2px;
     background: $midnight;
     width: 80px;
-    margin-top: 40px;
 }
 
