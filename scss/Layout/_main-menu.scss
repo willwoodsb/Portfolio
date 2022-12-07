@@ -10,6 +10,9 @@
     z-index: 2;
     text-align: center;
     padding: 40px 10px 40px;
+    hr {
+        width: 80px;
+    }
     &__item {
         color: $midnight;
         &:not(hr) {
@@ -23,7 +26,7 @@
             margin-bottom: 100px;
         }
         &:nth-child(7) {
-            margin-top: 50px;
+            margin-top: 40px;
         }
         &:not(:last-child) {
             a {
@@ -88,9 +91,5 @@
     font-weight: $font-weight--ultra-bold;
 }
 
-hr {
-    height: 2px;
-    background: $midnight;
-    width: 80px;
-}
+
 

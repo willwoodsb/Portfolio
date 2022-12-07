@@ -21,11 +21,11 @@
           <a href="#home" class="home popout-menu__item">WWB</a>
           <hr class="popout-menu__item"></hr>
           <div class="popout-menu__item"><a href="#">About Me</a></div>
-          <div class="popout-menu__item"><a href="#">My Portfolio</a></div>
+          <div class="popout-menu__item"><a href="#portfolio">My Portfolio</a></div>
           <div class="popout-menu__item"><a href="#">Coding Examples</a></div>
           <div class="popout-menu__item"><a href="#">SCS Scheme</a></div>
           <hr class="popout-menu__item"></hr>
-          <div class="popout-menu__item" ><a href="#"><div id="contact">Contact Me</div></a></div>
+          <div class="popout-menu__item" ><a href="#form"><div id="contact">Contact Me</div></a></div>
           <hr class="popout-menu__item"></hr>
           <div class="popout-menu__item"><a href="#"><div><span class="icon"></span></div></a></div>
 
@@ -99,29 +99,36 @@
             </a>
           </section>
 
+          
+
           <!-- Contact Form -->
-          <section class="width form">
+          <section class="width form" id="form">
             <div class="form__col">
               <h2>Get In Touch</h2>
-              <p>Please contact me via the form, I will be happy to recieve your message and get back to you as soon as possible!</p>
+              <p>Please contact me via the form, I will be happy to recieve your message and will get back to you as soon as possible!</p>
               <h3>07741 487037</h3>
               <h3>willwoodsb@gmail.com</h3>
             </div>
             <div class="form__col">
               <form action="" method="post">
-                <input type="text" id="fname" name="fname" placeholder="First Name">
-                <input type="text" id="lname" name="lname" placeholder="Last Name">
-                <input type="email" id="email" name="email" placeholder="Email Address">
-                <textarea id="message" name="message">Message</textarea>
-                <input type="submit" value="Submit">
+                <input type="text" class="form__col--child" id="fname" name="fname" placeholder="First Name">
+                <input type="text" class="form__col--child" id="lname" name="lname" placeholder="Last Name">
+                <input type="email" class="form__col--child" id="email" name="email" placeholder="Email Address">
+                <textarea class="form__col--child" id="message" name="message" placeholder="Message"></textarea>
+                <input type="submit" class="form__col--child" value="Submit">
               </form>
             </div>
           </section>
 
+          
+
         </main>
 
         <footer>
-
+          <a href="#portfolio" class="scroll">
+            <span class="icon"></span>
+            <p>Back To Top</p>
+          </a>
         </footer>
       </div>
     </div>  

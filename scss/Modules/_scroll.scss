@@ -1,0 +1,38 @@
+// --------------------------------------------------------------------------
+// Scroll -------------------------------------------------------------------
+// --------------------------------------------------------------------------
+.scroll {
+    display: block;
+}
+.title-section {
+    .scroll {
+        font-size: em(26px);
+        color: $white;
+        span::after {
+            content: "\ea43";
+        }
+        margin: 15vh 0 30px;
+        @media (min-width: 300px) and (min-height: 600px) {
+            margin-top: 25vh;
+        }
+        @include mq(large) {
+            margin-top: 30vh;
+        }
+        &:hover {
+            color: $dark-cream;
+        }
+    }
+}
+
+footer {
+    .scroll {
+        font-size: em(20px);
+        font-weight: $font-weight--bold;
+        color: $midnight;
+        text-align: center;
+        span::after {
+            content: "\ea41";
+        }
+    }
+    padding: 0 0 50px;
+}
