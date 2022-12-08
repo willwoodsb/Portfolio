@@ -1,24 +1,55 @@
 // --------------------------------------------------------------------------
-// Backgrounds --------------------------------------------------------------
+// Header -------------------------------------------------------------------
 // --------------------------------------------------------------------------
 
+//general header properties for all pages
 .title-section {
-    height: 100vh;
     color: $white;
     text-align: center;
     text-shadow: 0 0 5px black;
+    padding: 0;
+}
+
+//-----------------
+//specific to index
+//-----------------
+
+#index-title {
+    height: 100vh;
     @include flex-col;
     justify-content: flex-end;
     transition: ease .5s;
-    margin-top: 50px;
     h1 {
         margin-bottom: 20px;
     }
 }
 
+//---------------------------
+//specific to secondary pages
+//---------------------------
+
+.slim-header {
+    height: 300px;
+    position: relative;
+    h1 {
+        @extend %img-center;
+    }
+    @media screen and (max-height: 900px) {
+        height: 33.333vh;
+        min-height: 230px;
+    }
+    @media screen and (max-width: 470px)  {
+        h1 {
+            bottom: 60px;
+            font-size: em(36px);
+        }
+    }
+}
+
+
 //minor adjustments for small screens as although mostly designed as mobile first, this saved some coding
 @media screen and (max-width: 450px) {
-   .title-section {
+   #index-title {
         h1 {
             font-size: em(36px);
             @media screen and (max-height: 520px) {
@@ -33,5 +64,6 @@
         }
     }
 }
+
 
 

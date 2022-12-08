@@ -1,0 +1,78 @@
+// --------------------------------------------------------------------------
+// General properties for the secondary pages -------------------------------
+// --------------------------------------------------------------------------
+
+
+.aux-text {
+    
+    font-weight: $font-weight--bold;
+    min-width: 0;
+    h2 {
+        font-size: em(26px);
+        margin-bottom: 10px;
+        margin-top: 30px;
+        font-weight: $font-weight--ultra-bold;
+    }
+    h3 {
+        font-size: em(24px);
+        font-weight: $font-weight--bold;
+        margin-bottom: 5px;
+    }
+    h2, h3 {
+        color: $midnight;
+    }
+    p {
+        margin-bottom: 10px;
+        a {
+            color: $midnight;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -ms-word-break: break-all;
+            word-break: break-word;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    ul, p {
+        color: darken($dark-grey, 30%);
+    }
+    ul {
+        list-style-type: none;
+    }
+    ul li:before {
+    content: '\2014';
+    position: absolute;
+    margin-left: -20px;
+    }
+    &:first-child {
+        margin-top: 100px;
+    }
+    @include mq(medium) {
+        h2 {
+            font-size: em(32px);
+        }
+    }
+    @include mq(x-large) {
+        padding: 0 8vw;
+    }
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    img {
+        width: 200px;
+        @extend %img-center;
+    }
+}
+
+#about-me-text {
+    margin-bottom: 60px;
+    p:first-child {
+        color: $midnight;
+        font-weight: $font-weight--ultra-bold;
+    }
+}

@@ -1,16 +1,32 @@
 // --------------------------------------------------------------------------
 // Backgrounds --------------------------------------------------------------
 // --------------------------------------------------------------------------
+#water {
+    background-image: url("../img/background.jpg"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+    background-attachment: fixed;
+}
+#scs {
+    background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+}
+#coding {
+    background-position: left;
+    background-image: url("../img/coding.png"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+}
+#about-me {
+    background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+}
+#water, #about-me, #scs {
+    background-position: center;
+}
 
 .background-image {
-    background-image: url("../img/background.jpg"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-    height: 100vh;
+    
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: multiply;
     background-size: cover;
     border-bottom: 2px solid $midnight;
-    background-attachment: fixed;
+    
 }
 
 
