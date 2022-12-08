@@ -18,11 +18,17 @@
         @include mq(large) {
             margin-top: 30vh;
         }
-        &:hover {
-            color: $dark-cream;
-        }
     }
 }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 footer {
     .scroll {

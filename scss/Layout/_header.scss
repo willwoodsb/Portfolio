@@ -19,6 +19,7 @@
     @include flex-col;
     justify-content: flex-end;
     transition: ease .5s;
+    padding: 0 px;
     h1 {
         margin-bottom: 20px;
     }
@@ -48,19 +49,26 @@
 
 
 //minor adjustments for small screens as although mostly designed as mobile first, this saved some coding
-@media screen and (max-width: 450px) {
-   #index-title {
+#index-title {
+    @media screen and (max-width: 450px) {
+        padding: 0;
         h1 {
             font-size: em(36px);
-            @media screen and (max-height: 520px) {
-                font-size: em(30px);
-            }
         }
         h3 {
             font-size: em(26px)
         }
         p {
             font-size: 20px;
+        }
+    }
+    @media screen and (max-height: 520px) {
+        h1 {
+            font-size: em(30px);
+        }
+        
+        .scroll {
+            margin-top: 20px;
         }
     }
 }

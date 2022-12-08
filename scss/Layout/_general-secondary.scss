@@ -9,17 +9,16 @@
     min-width: 0;
     h2 {
         font-size: em(26px);
-        margin-bottom: 10px;
         margin-top: 30px;
         font-weight: $font-weight--ultra-bold;
     }
     h3 {
         font-size: em(24px);
         font-weight: $font-weight--bold;
-        margin-bottom: 5px;
     }
     h2, h3 {
         color: $midnight;
+        margin-bottom: 10px;
     }
     p {
         margin-bottom: 10px;
@@ -29,6 +28,7 @@
             word-wrap: break-word;
             -ms-word-break: break-all;
             word-break: break-word;
+            font-weight: $font-weight--ultra-bold;
             &:hover {
                 text-decoration: underline;
             }
@@ -66,6 +66,9 @@
     img {
         width: 200px;
         @extend %img-center;
+        &:hover {
+            width: 210px;
+        }
     }
 }
 
