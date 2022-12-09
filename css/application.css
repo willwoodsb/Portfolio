@@ -181,7 +181,7 @@ body {
 
 @font-face {
   font-family: 'IcoMoon-Free';
-  src: url("../fonts/IcoMoon-Free.ttf") format("truetype");
+  src: url("../Fonts/IcoMoon-Free.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 .icon {
@@ -601,11 +601,6 @@ body {
     .title-section .scroll {
       margin-top: 30vh; } }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(359deg); } }
 footer {
   padding: 0 0 50px; }
   footer .scroll {

@@ -21,15 +21,6 @@
     }
 }
 
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-
 footer {
     .scroll {
         font-size: em(20px);
