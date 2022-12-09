@@ -8,9 +8,9 @@
     .scroll {
         font-size: em(26px);
         color: $white;
-        // span::after {
-        //     content: "\ea43";
-        // }
+        span::after {
+            content: "\ea43";
+        }
         margin: 15vh 0 30px;
         @media (min-width: 300px) and (min-height: 600px) {
             margin-top: 25vh;

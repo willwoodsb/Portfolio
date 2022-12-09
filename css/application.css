@@ -592,6 +592,8 @@ body {
   font-size: 1.625em;
   color: #FFF;
   margin: 15vh 0 30px; }
+  .title-section .scroll span::after {
+    content: "\ea43"; }
   @media (min-width: 300px) and (min-height: 600px) {
     .title-section .scroll {
       margin-top: 25vh; } }
