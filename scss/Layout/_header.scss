@@ -4,6 +4,7 @@
 
 //general header properties for all pages
 .title-section {
+    position: relative;
     color: $white;
     text-align: center;
     text-shadow: 0 0 5px black;
@@ -16,8 +17,17 @@
 
 #index-title {
     height: 100vh;
-    @include flex-col;
-    justify-content: flex-end;
+    padding: 0;
+    #title {
+        @include flex-col;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+    }
+    
+    justify-content: flex-start;
     transition: ease .5s;
     padding: 0 px;
     h1 {
@@ -63,13 +73,13 @@
             font-size: 20px;
         }
     }
-    @media screen and (max-height: 520px) {
+    @media screen and (max-height: 650px) {
         h1 {
             font-size: em(30px);
         }
         
         .scroll {
-            margin-top: 20px;
+            margin-top: 10vh;
         }
     }
 }

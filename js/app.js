@@ -1,5 +1,5 @@
 //-----------------------------
-// Initializing variblaes 
+// Initializing variables 
 //-----------------------------
 
 const $hamburger = $('.hamburger-container div');
@@ -8,12 +8,91 @@ const $main = $('.main');
 let popoutState = false;
 let mousePos = [0, 0];
 let hamShow = false;
+
+//----------------------
+//On page load
+//----------------------
+
+$(document).ready(function() {
+    $(".animsition").animsition({
+        inClass: 'fade-in',
+        outClass: 'fade-out',
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+    });
+});
+
+//hide non JS elements
+$('#index-nav').css('width', '0').css('visibility', 'hidden');
+$('.no-JS').hide();
+$('#index-nav').children().css('width', '0');
+
+$('#scroll-down p, #scroll-down span').hide();
+
+//make hamburger visible 
 $('.hamburger-container').css('display', 'inline');
+
+$(function() {
+    $('.ticker').selfw({
+        time: 110,
+    })
+});
+
+$(function() {
+    $('#name').selfw({
+        text: 'My Name is Will Woods Ballard',
+        time: 110,
+    })
+});
+
+setTimeout(function() {
+    $(function() {
+        $('#web-dev').selfw({
+            text: 'I\'m a Web Developer',
+            time: 110,
+        })
+    })
+}, 3500);
+
+setTimeout(function() {
+    $('#scroll-down p, #scroll-down span').fadeIn(100);
+    $('#index-nav').css('width', '').css('visibility', '');
+    $('#index-nav').children().css('width', '');
+}, 6000);
 
 
 // --------------------------------------------
 //Event Listeners
 //---------------------------------------------
+
+//scroll button animations
+$('.scroll').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+  
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 700);
+    }
+  });
 
 
 //scroll event listener
@@ -33,7 +112,7 @@ $hamburger.on('click', (e) => {
     if (popoutState == false) {
         $hamburger.removeClass('hamburger');
         $popout.parent().removeClass('is-visible-large-screen').css('width', '100vw').css('transition', 'width ease .5s').css('background-color', 'white');
-        $main.hide("slide", { direction: "right" }, 400);
+        $main.hide("slide", { direction: "right" }, 500);
         setTimeout(function () {
             $popout.removeClass('is-visible-large-screen').removeClass('body__item').css('width', '100vw');
             $hamburger.addClass('cross');
@@ -43,7 +122,7 @@ $hamburger.on('click', (e) => {
         $hamburger.removeClass('cross');
         $popout.parent().addClass('is-visible-large-screen').css('background-color', '').css('width', '');
         $popout.addClass('is-visible-large-screen').css('transition-delay', '').css('width', '');
-        $main.show(400);
+        $main.show();
         setTimeout(function () {
             $hamburger.addClass('hamburger');
         }, 500);
@@ -64,7 +143,6 @@ function makeSticky(element) {
 
     // Check if the element is in the viewport  
     const isInViewport = (position.top > -100 && $(element).css('position') !== 'fixed');
-    console.log(!isInViewport && !hamShow );
 
     if (!isInViewport && !hamShow ) {  
         // The element is not in the viewport, so add the "sticky" class to make it sticky
@@ -79,13 +157,13 @@ function makeSticky(element) {
                     i = 0;
                     hoverLoop();
                 } else if (!isHovering || i <= 2000) {
-                    i += 100;
+                    i += 250;
                     hoverLoop();
                 } else {
                     element.classList.remove("sticky"); 
                     hamShow = false;
                 }
-            }, 100);
+            }, 250);
         }
         
         hoverLoop();
@@ -94,7 +172,6 @@ function makeSticky(element) {
         // The element is in the viewport, so remove the "sticky" class
         element.classList.remove("sticky"); 
         hamShow = false; 
-        console.log(hamShow);
     } 
 }
  

@@ -3,6 +3,7 @@
 // --------------------------------------------------------------------------
 
 .hamburger {
+    width: 57px;
     span::after {
         content: "\e9bd";
     }
@@ -48,6 +49,8 @@
     left: 3%;
     margin-top: 10px;
     display: none;
+    width: 57px;
+    cursor: pointer;
 }
 
 .sticky {
@@ -55,6 +58,7 @@
     display: none;
     top: 0;
     width: 100%;
+    width: inherit;
   }
 
 

@@ -7,49 +7,52 @@
     <title>Portfolio | Will Woods Ballard | Web Developer</title>
 
     <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="animsition/animsition.min.css">
     <link rel="icon" href="img/W.png" type="image/x-icon">
   </head>
   <body>
-    <!-- hamburger -->
-    <a href="#" class="hamburger-container width">
-      <div class="hamburger"><span class="icon"></span></div>
-    </a>
-    
-    <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
-    <div class="body">
-      <!-- Main menu -->
-      <section class="body__item is-visible-large-screen">
-        <div class="popout-menu white is-visible-large-screen">
-          <div class="home popout-menu__item"><a href="./index.html#top">WWB</a></div>
-          <hr class="popout-menu__item">
-          <div class="popout-menu__item"><a href="./about-me.html">About Me</a></div>
-          <div class="popout-menu__item"><a href="./index.html#portfolio">My Portfolio</a></div>
-          <div class="popout-menu__item"><a href="./coding-examples.html">Coding Examples</a></div>
-          <div class="popout-menu__item"><a href="./scs.html">SCS Scheme</a></div>
-          <hr class="popout-menu__item">
-          <div class="popout-menu__item" ><a href="./index.html#form"><div id="contact">Contact Me</div></a></div>
-          <hr class="popout-menu__item">
-          <div class="popout-menu__item"><a href="https://www.linkedin.com/in/william-woods-ballard-1947101b3" target="_blank"><div><span class="icon"></span></div></a></div>
+    <div class="animsition">
+      <!-- hamburger -->
+      <a class="hamburger-container width">
+        <div class="hamburger"><span class="icon"></span></div>
+      </a>
+      
+      <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
+      <div class="body">
+        <!-- Main menu -->
+        <section class="body__item is-visible-large-screen">
+          <div class="popout-menu white is-visible-large-screen">
+            <div class="home popout-menu__item"><a href="./index.html#top">WWB</a></div>
+            <hr class="popout-menu__item">
+            <div class="popout-menu__item"><a href="./about-me.html">About Me</a></div>
+            <div class="popout-menu__item"><a href="./index.html#portfolio">My Portfolio</a></div>
+            <div class="popout-menu__item"><a href="./coding-examples.html">Coding Examples</a></div>
+            <div class="popout-menu__item"><a href="./scs.html">SCS Scheme</a></div>
+            <hr class="popout-menu__item">
+            <div class="popout-menu__item" ><a href="./index.html#form"><div id="contact">Contact Me</div></a></div>
+            <hr class="popout-menu__item">
+            <div class="popout-menu__item"><a href="https://www.linkedin.com/in/william-woods-ballard-1947101b3" target="_blank"><div><span class="icon"></span></div></a></div>
+          </div>
+        </section>
+
+        <!-- Content div -->
+        <div class="body__item body-secondary main">
+
+          <!-- Header -->
+          <header class="background-image slim-header title-section" id="coding">
+              <h1>Coding Examples</h1>
+          </header>
+
+          <!-- Main -->
+          <main class="white">
+            <section class="width aux-text">
+              <h2 style="text-align: center; margin-top: 200px;">Coming Soon</h2>
+            </section>
+
+          </main>
         </div>
-      </section>
-
-      <!-- Content div -->
-      <div class="body__item body-secondary main">
-
-        <!-- Header -->
-        <header class="background-image slim-header title-section" id="coding">
-            <h1>Coding Examples</h1>
-        </header>
-
-        <!-- Main -->
-        <main class="white">
-          <section class="width aux-text">
-            <h2 style="text-align: center; margin-top: 200px;">Coming Soon</h2>
-          </section>
-
-        </main>
-      </div>
-    </div> 
+      </div> 
+    </div>
     <!-- JS links -->
     <script
       src="https://code.jquery.com/jquery-3.6.2.min.js"
@@ -61,7 +64,7 @@
       integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
       crossorigin="anonymous">
     </script>
-
+    <script src="animsition/animsition.min.js"></script>
     <script src="js/app.js"></script>  
   </body>
 </html>

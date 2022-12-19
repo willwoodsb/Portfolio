@@ -6,133 +6,138 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio | Will Woods Ballard | Web Developer</title>
     <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="animsition/animsition.min.css">
     <link rel="icon" href="img/W.png" type="image/x-icon">
   </head>
   <body>
-    <!-- hamburger -->
-    <a href="#" class="hamburger-container width">
-      <div class="hamburger"><span class="icon"></span></div>
-    </a>
-    
-    <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
-    <div class="body">
-      <!-- Main menu -->
-      <section class="body__item is-visible-large-screen">
-        <div class="popout-menu white is-visible-large-screen">
-          <div class="home popout-menu__item"><a href="#top">WWB</a></div>
-          <hr class="popout-menu__item">
-          <div class="popout-menu__item"><a href="./about-me.html">About Me</a></div>
-          <div class="popout-menu__item"><a href="#portfolio">My Portfolio</a></div>
-          <div class="popout-menu__item"><a href="./coding-examples.html">Coding Examples</a></div>
-          <div class="popout-menu__item"><a href="./scs.html">SCS Scheme</a></div>
-          <hr class="popout-menu__item">
-          <div class="popout-menu__item" ><a href="#form"><div id="contact">Contact Me</div></a></div>
-          <hr class="popout-menu__item">
-          <div class="popout-menu__item"><a href="https://www.linkedin.com/in/william-woods-ballard-1947101b3" target="_blank"><div><span class="icon"></span></div></a></div>
-        </div>
-      </section>
+    <div class="animsition">
+      <!-- hamburger -->
+      <a class="hamburger-container width">
+        <div class="hamburger"><span class="icon"></span></div>
+      </a>
+      
+      <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
+      <div class="body">
+        <!-- Main menu -->
+        <section class="body__item is-visible-large-screen" id="index-nav">
+          <div class="popout-menu white is-visible-large-screen">
+            <div class="home popout-menu__item"><a href="./index.html#top">WWB</a></div>
+            <hr class="popout-menu__item">
+            <div class="popout-menu__item"><a href="./about-me.html">About Me</a></div>
+            <div class="popout-menu__item"><a href="./index.html#portfolio">My Portfolio</a></div>
+            <div class="popout-menu__item"><a href="./coding-examples.html">Coding Examples</a></div>
+            <div class="popout-menu__item"><a href="./scs.html">SCS Scheme</a></div>
+            <hr class="popout-menu__item">
+            <div class="popout-menu__item" ><a href="./index.html#form"><div id="contact">Contact Me</div></a></div>
+            <hr class="popout-menu__item">
+            <div class="popout-menu__item"><a href="https://www.linkedin.com/in/william-woods-ballard-1947101b3" target="_blank"><div><span class="icon"></span></div></a></div>
+          </div>
+        </section>
 
-      <!-- Content div -->
-      <div class="body__item main" id="main">
+        <!-- Content div -->
+        <div class="body__item main" id="main">
 
-        <!-- Header -->
-        <header class="background-image" id="water">
-          <!-- Main title section -->
-          <section class="title-section width" id="index-title">
-            <div id="title">
-              <h1>My Name is Will Woods Ballard</h1>
-              <h3>I'm a Web Developer</h3>
-            </div>
+          <!-- Header -->
+          <header class="background-image" id="water">
+            <!-- Main title section -->
+            <section class="title-section width" id="index-title">
+              <div id="title">
+                <h1 class="no-JS">My Name is Will Woods Ballard</h1>
+                <h3 class="no-JS">I'm a Web Developer</h3>
+                <h1 id="name"></h1>
+                <h3 id="web-dev"></h3>
+              </div>
+              <a href="#portfolio" class="scroll" id="scroll-down">
+                <p>Scroll Down</p>
+                <span class="icon"></span>
+              </a>
+            </section>
+
+          </header>
+
+          <!-- Main -->
+          <main class="white">
+            <!-- Main content -->
+            <section id="portfolio" class="portfolio width">
+              <div class="portfolio__item">
+                <img src="img/netmatters.png" alt="Netmatters">
+                <div class="padded">
+                  <h2>Project One</h2>
+                  <a href="https://willwoodsb.github.io/HTML-and-CSS-Reflection/" target="_blank" class="view-link"><p>View Website</p><span class="icon"></span></a>
+                  <a href="https://github.com/willwoodsb/HTML-and-CSS-Reflection" target="_blank" class="view-link"><p>View Github Repo</p><span class="icon"></span></a>
+                </div>
+              </div>
+              <div class="portfolio__item">
+                <img src="img/placeholder1.jpg" alt="Placeholder Image">
+                <div class="padded">
+                  <h2>Project Two</h2>
+                  <div class="view-link"><p>Coming Soon</p></div>
+                </div>
+              </div>
+              <div class="portfolio__item">
+                <img src="img/placeholder2.jpg" alt="Placeholder Image">
+                <div class="padded">
+                  <h2>Project Three</h2>
+                  <div class="view-link"><p>Coming Soon</p></div>
+                </div>
+              </div>
+              <div class="portfolio__item">
+                <img src="img/placeholder3.jpg" alt="Placeholder Image">
+                <div class="padded">
+                  <h2>Project Four</h2>
+                  <div class="view-link"><p>Coming Soon</p></div>
+                </div>
+              </div>
+              <div class="portfolio__item">
+                <img src="img/placeholder4.jpg" alt="Placeholder Image">
+                <div class="padded">
+                  <h2>Project Five</h2>
+                  <div class="view-link"><p>Coming Soon</p></div>
+                </div>
+              </div>
+              <div class="portfolio__item">
+                <img src="img/placeholder5.jpg" alt="Placeholder Image">
+                <div class="padded">
+                  <h2>Project Six</h2>
+                  <div class="view-link"><p>Coming Soon</p></div>
+                </div>
+              </div>
+            </section>
+
+            
+
+            <!-- Contact Form -->
+            <section class="width form" id="form">
+              <div class="form__col">
+                <h2>Get In Touch</h2>
+                <p>Please contact me via the form, I will be happy to recieve your message and will get back to you as soon as possible!</p>
+                <h3>07741 487037</h3>
+                <h3>willwoodsb@gmail.com</h3>
+              </div>
+              <div class="form__col">
+                <form method="post">
+                  <input type="text" class="form__col--child" id="fname" name="fname" placeholder="First Name">
+                  <input type="text" class="form__col--child" id="lname" name="lname" placeholder="Last Name">
+                  <input type="email" class="form__col--child" id="email" name="email" placeholder="Email Address">
+                  <textarea class="form__col--child" id="message" name="message" placeholder="Message"></textarea>
+                  <input type="submit" class="form__col--child" value="Submit">
+                </form>
+              </div>
+            </section>
+
+            
+
+          </main>
+
+          <footer>
             <a href="#portfolio" class="scroll">
-              <p>Scroll Down</p>
               <span class="icon"></span>
+              <p>Back To Top</p>
             </a>
-          </section>
-
-        </header>
-
-        <!-- Main -->
-        <main class="white">
-          <!-- Main content -->
-          <section id="portfolio" class="portfolio width">
-            <div class="portfolio__item">
-              <img src="img/netmatters.png" alt="Netmatters">
-              <div class="padded">
-                <h2>Project One</h2>
-                <a href="https://willwoodsb.github.io/HTML-and-CSS-Reflection/" target="_blank" class="view-link"><p>View Website</p><span class="icon"></span></a>
-                <a href="https://github.com/willwoodsb/HTML-and-CSS-Reflection" target="_blank" class="view-link"><p>View Github Repo</p><span class="icon"></span></a>
-              </div>
-            </div>
-            <div class="portfolio__item">
-              <img src="img/placeholder1.jpg" alt="Placeholder Image">
-              <div class="padded">
-                <h2>Project Two</h2>
-                <div class="view-link"><p>Coming Soon</p></div>
-              </div>
-            </div>
-            <div class="portfolio__item">
-              <img src="img/placeholder2.jpg" alt="Placeholder Image">
-              <div class="padded">
-                <h2>Project Three</h2>
-                <div class="view-link"><p>Coming Soon</p></div>
-              </div>
-            </div>
-            <div class="portfolio__item">
-              <img src="img/placeholder3.jpg" alt="Placeholder Image">
-              <div class="padded">
-                <h2>Project Four</h2>
-                <div class="view-link"><p>Coming Soon</p></div>
-              </div>
-            </div>
-            <div class="portfolio__item">
-              <img src="img/placeholder4.jpg" alt="Placeholder Image">
-              <div class="padded">
-                <h2>Project Five</h2>
-                <div class="view-link"><p>Coming Soon</p></div>
-              </div>
-            </div>
-            <div class="portfolio__item">
-              <img src="img/placeholder5.jpg" alt="Placeholder Image">
-              <div class="padded">
-                <h2>Project Six</h2>
-                <div class="view-link"><p>Coming Soon</p></div>
-              </div>
-            </div>
-          </section>
-
-          
-
-          <!-- Contact Form -->
-          <section class="width form" id="form">
-            <div class="form__col">
-              <h2>Get In Touch</h2>
-              <p>Please contact me via the form, I will be happy to recieve your message and will get back to you as soon as possible!</p>
-              <h3>07741 487037</h3>
-              <h3>willwoodsb@gmail.com</h3>
-            </div>
-            <div class="form__col">
-              <form method="post">
-                <input type="text" class="form__col--child" id="fname" name="fname" placeholder="First Name">
-                <input type="text" class="form__col--child" id="lname" name="lname" placeholder="Last Name">
-                <input type="email" class="form__col--child" id="email" name="email" placeholder="Email Address">
-                <textarea class="form__col--child" id="message" name="message" placeholder="Message"></textarea>
-                <input type="submit" class="form__col--child" value="Submit">
-              </form>
-            </div>
-          </section>
-
-          
-
-        </main>
-
-        <footer>
-          <a href="#portfolio" class="scroll">
-            <span class="icon"></span>
-            <p>Back To Top</p>
-          </a>
-        </footer>
-      </div>
-    </div>  
+          </footer>
+        </div>
+      </div>  
+    </div>
     <!-- JS links -->
     <script
       src="https://code.jquery.com/jquery-3.6.2.min.js"
@@ -144,6 +149,8 @@
       integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
       crossorigin="anonymous">
     </script>
+    <script src="animsition/animsition.min.js"></script>
+    <script src="text-effect/selfw.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

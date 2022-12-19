@@ -224,6 +224,7 @@ hr {
   height: 2px; }
 
 .title-section {
+  position: relative;
   color: #FFF;
   text-align: center;
   text-shadow: 0 0 5px black;
@@ -231,11 +232,18 @@ hr {
 
 #index-title {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  padding: 0;
+  justify-content: flex-start;
   transition: ease .5s;
   padding: 0 px; }
+  #index-title #title {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%; }
   #index-title h1 {
     margin-bottom: 20px;
     text-transform: uppercase; }
@@ -261,11 +269,11 @@ hr {
       font-size: 1.625em; }
     #index-title p {
       font-size: 20px; } }
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 650px) {
   #index-title h1 {
     font-size: 1.875em; }
   #index-title .scroll {
-    margin-top: 20px; } }
+    margin-top: 10vh; } }
 
 .portfolio {
   padding: 70px 0 60px;
@@ -575,6 +583,7 @@ body {
       margin-right: auto; } }
 
 .hamburger {
+  width: 57px;
   font-size: 2.8125em;
   color: #FFF; }
   .hamburger span::after {
@@ -613,29 +622,32 @@ body {
   z-index: 100;
   left: 3%;
   margin-top: 10px;
-  display: none; }
+  display: none;
+  width: 57px;
+  cursor: pointer; }
 
 .sticky {
   position: fixed;
   display: none;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  width: inherit; }
 
 .scroll {
   display: block; }
 
 .title-section .scroll {
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1.625em;
   color: #FFF;
-  margin: 15vh 0 30px; }
+  height: 100px;
+  margin-bottom: -30px; }
   .title-section .scroll span::after {
     content: "\ea43"; }
-  @media (min-width: 300px) and (min-height: 600px) {
-    .title-section .scroll {
-      margin-top: 25vh; } }
-  @media screen and (min-width: 768px) {
-    .title-section .scroll {
-      margin-top: 30vh; } }
 
 footer {
   padding: 0 0 50px; }
