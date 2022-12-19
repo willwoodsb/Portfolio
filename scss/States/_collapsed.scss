@@ -9,14 +9,15 @@
   }
   @media screen and (min-width: $brkpoint-lg) {
     transition: width ease .5s;
+
   }
 }
 
 .is-collapsed-large-screen {
-  @media screen and (min-width: ($brkpoint-lg - 1)) {
+  @media screen and (min-width: ($brkpoint-lg)) {
     @include collapse;
   }
-  @media screen and (max-width: $brkpoint-lg) {
+  @media screen and (max-width: ($brkpoint-lg - 1)) {
     transition-delay: .5s;
   }
 }

@@ -10,8 +10,8 @@
   </head>
   <body>
     <!-- hamburger -->
-    <a href="#" class="hamburger is-collapsed-large-screen width">
-      <div><span class="icon"></span></div>
+    <a href="#" class="hamburger-container width">
+      <div class="hamburger"><span class="icon"></span></div>
     </a>
     
     <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
@@ -29,12 +29,11 @@
           <div class="popout-menu__item" ><a href="#form"><div id="contact">Contact Me</div></a></div>
           <hr class="popout-menu__item">
           <div class="popout-menu__item"><a href="https://www.linkedin.com/in/william-woods-ballard-1947101b3" target="_blank"><div><span class="icon"></span></div></a></div>
-
         </div>
       </section>
 
       <!-- Content div -->
-      <div class="body__item">
+      <div class="body__item main" id="main">
 
         <!-- Header -->
         <header class="background-image" id="water">
@@ -134,5 +133,17 @@
         </footer>
       </div>
     </div>  
+    <!-- JS links -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous">
+    </script> 
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous">
+    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

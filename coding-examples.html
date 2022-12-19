@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio | Will Woods Ballard | Web Developer</title>
+
     <link rel="stylesheet" href="css/application.css">
     <link rel="icon" href="img/W.png" type="image/x-icon">
   </head>
   <body>
     <!-- hamburger -->
-    <a href="#" class="hamburger is-collapsed-large-screen width">
-      <div><span class="icon"></span></div>
+    <a href="#" class="hamburger-container width">
+      <div class="hamburger"><span class="icon"></span></div>
     </a>
     
     <!-- Container div for the content of the website. Contains two item divs, one for the main menu and one for the main content of the website. -->
-    <div class="body body-secondary">
+    <div class="body">
       <!-- Main menu -->
       <section class="body__item is-visible-large-screen">
         <div class="popout-menu white is-visible-large-screen">
@@ -29,12 +30,11 @@
           <div class="popout-menu__item" ><a href="./index.html#form"><div id="contact">Contact Me</div></a></div>
           <hr class="popout-menu__item">
           <div class="popout-menu__item"><a href="https://www.linkedin.com/in/william-woods-ballard-1947101b3" target="_blank"><div><span class="icon"></span></div></a></div>
-
         </div>
       </section>
 
       <!-- Content div -->
-      <div class="body__item">
+      <div class="body__item body-secondary main">
 
         <!-- Header -->
         <header class="background-image slim-header title-section" id="coding">
@@ -49,6 +49,19 @@
 
         </main>
       </div>
-    </div>  
+    </div> 
+    <!-- JS links -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous">
+    </script> 
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous">
+    </script>
+
+    <script src="js/app.js"></script>  
   </body>
 </html>

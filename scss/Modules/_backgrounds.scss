@@ -26,10 +26,15 @@
     background-blend-mode: multiply;
     background-size: cover;
     border-bottom: 2px solid $midnight;
+    z-index: 0;
     
 }
 
 
 body {
-    background-color: lighten($grey, 15%);
+    background-color: $white;
+}
+
+.white {
+    background-color: $white;
 }

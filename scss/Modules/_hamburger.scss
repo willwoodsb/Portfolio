@@ -3,26 +3,59 @@
 // --------------------------------------------------------------------------
 
 .hamburger {
-    position: absolute;
-    z-index: 100;
-    left: 0%;
-    margin-top: 10px;
-    font-size: em(50px);
-    color: $dark-grey;
     span::after {
         content: "\e9bd";
     }
     span {
         transition: none;
-        &:hover {
-            color: $dark-cream;
-        }
+        border: px solid $midnight;
+        background-color: lighten($midnight, 15%);
+        padding: 0px 6px 4px 6px;
+        border-radius: 4px;
+        box-shadow: 0 0 36px rgba(0,0,0,0.5);
+        // &:hover {
+        //     color: $dark-cream;
+        // }
     }
+    font-size: em(45px);
+    color: $white;
+    @media screen and (min-width: $brkpoint-lg) {
+        @include collapse;
+    }
+}
+.cross {
+    span::after {
+        content: "\ea0f";
+    }
+    span {
+        transition: none;
+        // &:hover {
+        //     color: $dark-cream;
+        // }
+    }
+    font-size: em(30px);
+    padding-top: 13px;
+    padding-left: 8px;
+    color: $midnight;
     @include mq(large) {
-        color: lighten($grey, 15%);
+        padding-left: 33px;
     }
 }
 
+.hamburger-container {
+    position: absolute;
+    z-index: 100;
+    left: 3%;
+    margin-top: 10px;
+    display: none;
+}
+
+.sticky {
+    position: fixed; 
+    display: none;
+    top: 0;
+    width: 100%;
+  }
 
 
 

@@ -1,15 +1,13 @@
 // --------------------------------------------------------------------------
 // Main Menu ----------------------------------------------------------------
 // --------------------------------------------------------------------------
-
 .popout-menu {
     position: fixed;
     width: 175px;
     height: 100vh;
-    border-right: 2px solid $midnight;
-    z-index: 2;
     text-align: center;
     padding: 40px 10px 40px;
+    border-right: 2px solid $midnight;
     hr {
         width: 80px;
     }
@@ -18,7 +16,7 @@
         &:not(hr) {
             margin: 20px 0 20px;
         }
-        @media screen and (min-width: $brkpoint-lg) {
+        @include mq(large) {
             transition-delay: .5s;
         }
         &:nth-child(2) {
@@ -94,6 +92,7 @@
     @include flex-row;
     justify-content: center;
     &__item:first-child {
+        z-index: 99;
         position: relative;
         top: 0;
         left: 0;
