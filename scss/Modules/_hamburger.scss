@@ -51,6 +51,9 @@
     display: none;
     width: 57px;
     cursor: pointer;
+    div:hover {
+        color: lighten($midnight, 55%);
+    }
 }
 
 .sticky {

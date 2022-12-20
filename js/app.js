@@ -8,6 +8,7 @@ const $main = $('.main');
 let popoutState = false;
 let mousePos = [0, 0];
 let hamShow = false;
+let scrollPos = 0;
 
 //----------------------
 //On page load
@@ -39,42 +40,71 @@ $(document).ready(function() {
 });
 
 //hide non JS elements
-$('#index-nav').css('width', '0').css('visibility', 'hidden');
 $('.no-JS').hide();
-$('#index-nav').children().css('width', '0');
+// $('#index-nav').children().css('width', '0');
+// $('#index-nav').css('width', '0').css('visibility', 'hidden');
 
 $('#scroll-down p, #scroll-down span').hide();
 
 //make hamburger visible 
 $('.hamburger-container').css('display', 'inline');
 
-$(function() {
-    $('.ticker').selfw({
-        time: 110,
-    })
-});
-
-$(function() {
-    $('#name').selfw({
-        text: 'My Name is Will Woods Ballard',
-        time: 110,
-    })
-});
+//on load animations for main header section
 
 setTimeout(function() {
     $(function() {
-        $('#web-dev').selfw({
-            text: 'I\'m a Web Developer',
+        $('#name').selfw({
+            text: 'My Name is Will Woods Ballard',
             time: 110,
         })
-    })
-}, 3500);
+    });
 
-setTimeout(function() {
-    $('#scroll-down p, #scroll-down span').fadeIn(100);
-    $('#index-nav').css('width', '').css('visibility', '');
-    $('#index-nav').children().css('width', '');
-}, 6000);
+    setTimeout(function() {
+        $(function() {
+            $('#web-dev').selfw({
+                text: 'I\'m a Web Developer',
+                time: 110,
+            })
+        })
+    }, 3500);
+
+    setTimeout(function() {
+        $('#scroll-down p, #scroll-down span').fadeIn(100);
+        // $('#index-nav').css('width', '').css('visibility', '');
+        // $('#index-nav').children().css('width', '');
+    }, 5500);
+}, 1000);
+
+//---------------------------------------------
+//Form Validation
+//---------------------------------------------
+
+const input = $('input, textarea');
+const email = $('input[type = email]');
+
+input.on('invalid', function (event) {
+  if (event.target.validity.valueMissing) {
+    event.target.setCustomValidity(' ');
+    $(`#${event.target.id} + .error`).show();
+  }
+});
+
+function validateForm(input) {
+    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!emailRegex.test(input.value)) {
+        $(`#email + .error`).show();
+        return false;
+    } else {
+        return true;
+    };
+}
+    
+input.on('change', function (event) {
+    $(`#${event.target.id} + .error`).hide();
+});
+
+
+
 
 
 // --------------------------------------------
@@ -82,17 +112,18 @@ setTimeout(function() {
 //---------------------------------------------
 
 //scroll button animations
-$('.scroll').on('click', function(event) {
-
-    var target = $(this.getAttribute('href'));
-  
+$('.scroll, .internal-links').on('click', function(event) {
+    if ($(event.target).hasClass('internal-links')) {
+        popoutState = true;
+    } 
+    let target = $(this.getAttribute('href'));
     if (target.length) {
-      event.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top
-      }, 700);
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 700);
     }
-  });
+});
 
 
 //scroll event listener
@@ -107,28 +138,70 @@ window.addEventListener('mousemove', (e) => {
     mousePos[1] = window.event.clientY;
 });
 
+
 // menu popout click watcher 
-$hamburger.on('click', (e) => {
+$('.hamburger-container div, .internal-links').on('click', (event) => {
+
+    //if the popout is not out, open it and add css properties and transitions to make look good 
     if (popoutState == false) {
+        scrollPos = window.pageYOffset; //store scroll position
         $hamburger.removeClass('hamburger');
         $popout.parent().removeClass('is-visible-large-screen').css('width', '100vw').css('transition', 'width ease .5s').css('background-color', 'white');
         $main.hide("slide", { direction: "right" }, 500);
+        //wait until transitions have finished to make cross appear
         setTimeout(function () {
             $popout.removeClass('is-visible-large-screen').removeClass('body__item').css('width', '100vw');
             $hamburger.addClass('cross');
         }, 500);
         popoutState = true;
+
+    //otherwise close it and remove css properties and transitions
     } else {
         $hamburger.removeClass('cross');
         $popout.parent().addClass('is-visible-large-screen').css('background-color', '').css('width', '');
         $popout.addClass('is-visible-large-screen').css('transition-delay', '').css('width', '');
-        $main.show();
+        $main.show("slide", { direction: "right" },10);
+
+        //wait until transitions have finished to make hamburger reappear
         setTimeout(function () {
             $hamburger.addClass('hamburger');
         }, 500);
         popoutState = false;
-    }
 
+        setTimeout(function() {
+            //if the item that was clicked on was an internal link, scroll to section
+            if ($(event.target).hasClass('internal-links')) {
+                //make string containing the id at the end of the href
+                let href = event.target.href;
+                href = href.substring(href.indexOf('#') + 1);
+                href = `#${href}`;
+                //first gets close to position but not exact due to screen resizing
+                $('html, body').stop().animate({
+                    scrollTop: $(href).offset().top
+                }, 500);
+                //second gets to exact position
+                setTimeout(function() {
+                    $('html, body').stop().animate({
+                        scrollTop: $(href).offset().top
+                    }, 100);
+                }, 500);
+            }
+            //otherwise scroll to the stored scroll position
+            else {
+                //first gets close to position but not exact due to screen resizing
+                $('html, body').stop().animate({
+                    scrollTop: scrollPos
+                }, 0);
+                //second gets to exact position
+                setTimeout(function() {
+                    $('html, body').stop().animate({
+                        scrollTop: scrollPos
+                    }, 100);
+                }, 500);
+            }
+        }, 0);
+        
+    }
 });
 
 

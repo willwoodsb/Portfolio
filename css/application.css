@@ -415,7 +415,7 @@ hr {
   .form h3 {
     font-size: 1.25em;
     font-weight: 700; }
-  .form h2, .form p {
+  .form h2, .form p:not(.error) {
     margin-bottom: 20px; }
   .form form {
     display: grid;
@@ -477,6 +477,11 @@ hr {
     form .form__col--child:nth-child(n + 3) {
       grid-column-start: 1;
       grid-column-end: 3; } }
+.error {
+  color: red;
+  font-size: 14px;
+  display: none; }
+
 .aux-text {
   font-weight: 700;
   min-width: 0; }
@@ -531,7 +536,8 @@ hr {
   margin-bottom: 60px; }
   #about-me-text p:first-child {
     color: #333645;
-    font-weight: 900; }
+    font-weight: 900;
+    font-style: italic; }
 
 #water {
   background-image: url("../img/background.jpg"), linear-gradient(to bottom, #5c6e83, #ced5dd);
@@ -625,6 +631,8 @@ body {
   display: none;
   width: 57px;
   cursor: pointer; }
+  .hamburger-container div:hover {
+    color: #c0c3d0; }
 
 .sticky {
   position: fixed;

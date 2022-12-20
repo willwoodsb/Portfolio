@@ -11,7 +11,7 @@
         font-size: em(20px);
         font-weight: $font-weight--bold;
     }
-    h2, p {
+    h2, p:not(.error) {
         margin-bottom: 20px;
     }
     form {
@@ -67,6 +67,12 @@
 }
 @media screen and (min-width: $brkpoint-xxlg) {
     @include form-column-state;
+}
+
+.error {
+    color: red;
+    font-size: $font-size--small;
+    display: none;
 }
 
 
