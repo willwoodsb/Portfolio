@@ -14,6 +14,18 @@ let scrollPos = 0;
 //On page load
 //----------------------
 
+//hide non JS elements
+$('.no-JS').hide();
+// $('#index-nav').children().css('width', '0');
+// $('#index-nav').css('width', '0').css('visibility', 'hidden');
+
+$('#scroll-down p, #scroll-down span').hide();
+
+//make hamburger visible 
+$('.hamburger-container').css('display', 'inline');
+
+//on load animations for main header section
+
 $(document).ready(function() {
     $(".animsition").animsition({
         inClass: 'fade-in',
@@ -37,43 +49,36 @@ $(document).ready(function() {
         overlayParentElement : 'body',
         transition: function(url){ window.location.href = url; }
     });
-});
-
-//hide non JS elements
-$('.no-JS').hide();
-// $('#index-nav').children().css('width', '0');
-// $('#index-nav').css('width', '0').css('visibility', 'hidden');
-
-$('#scroll-down p, #scroll-down span').hide();
-
-//make hamburger visible 
-$('.hamburger-container').css('display', 'inline');
-
-//on load animations for main header section
-
-setTimeout(function() {
-    $(function() {
-        $('#name').selfw({
-            text: 'My Name is Will Woods Ballard',
-            time: 110,
-        })
-    });
-
+    
+    //header animations
     setTimeout(function() {
         $(function() {
-            $('#web-dev').selfw({
-                text: 'I\'m a Web Developer',
+            $('#name').selfw({
+                text: 'My Name is Will Woods Ballard',
                 time: 110,
             })
-        })
-    }, 3500);
+        });
 
-    setTimeout(function() {
-        $('#scroll-down p, #scroll-down span').fadeIn(100);
-        // $('#index-nav').css('width', '').css('visibility', '');
-        // $('#index-nav').children().css('width', '');
-    }, 5500);
-}, 1000);
+        setTimeout(function() {
+            $(function() {
+                $('#web-dev').selfw({
+                    text: 'I\'m a Web Developer',
+                    time: 110,
+                })
+            })
+        }, 3500);
+
+        setTimeout(function() {
+            $('#scroll-down p, #scroll-down span').fadeIn(100);
+            // $('#index-nav').css('width', '').css('visibility', '');
+            // $('#index-nav').children().css('width', '');
+        }, 5500);
+    }, 1000);
+});
+
+
+
+
 
 //---------------------------------------------
 //Form Validation
