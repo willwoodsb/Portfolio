@@ -39,17 +39,34 @@
         <div class="body__item body-secondary main">
 
           <!-- Header -->
-          <header class="background-image slim-header title-section" id="coding">
+          <header class="background-image coding__header slim-header title-section coding" id="coding-top">
               <h1>Coding Examples</h1>
           </header>
 
           <!-- Main -->
           <main class="white">
             <section class="width aux-text">
-              <h2 style="text-align: center; margin-top: 200px;">Coming Soon</h2>
+              <h2>Sass Loop</h2>
+              <img src="img/coding-example-sass-loop.png" alt="Sass Loop Example" class="coding-examples">
+              <p>This loop, written in Sass, defines the theme colours of the nav bar in <a href="https://willwoodsb.github.io/HTML-and-CSS-Reflection/" target="_blank">my recreation<span class="icon"></span></a> of the <a href="https://willwoodsb.github.io/HTML-and-CSS-Reflection/" target="_blank">Netmatters homepage<span class="icon"></span></a>.
+              It does so by accessing theme colours defined in a Sass map in the _config file, allowing someone to easily modify these colours should they desire. 
+              Using a loop to do this rather than individually coding each item adheres to the Don't Repeat Yourself, (DRY), principle which is general coding best practice.</p>
+            
+              <h2>Javascript Menu Icon</h2>
+              <img src="img/menu-icon.png" alt="Javascript Function" class="coding-examples">
+              <p>This Javascript function is taken from this website and causes the menu pop-out icon to appear and dissapear as the user scrolls
+                It accomplishes this by adding a CSS class to the hamburger element when the user has scrolled it out of viewport which brings it back into viewport.
+                The icon will appear for two seconds before dissapearing again, unless the user is hovering on the item.
+              </p>
             </section>
 
           </main>
+          <footer class="background-image coding__footer coding">
+            <a href="#coding-top" class="scroll">
+              <span class="icon"></span>
+              <p>Back To Top</p>
+            </a>
+          </footer>
         </div>
       </div> 
     </div>

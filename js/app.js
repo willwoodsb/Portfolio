@@ -220,7 +220,7 @@ function makeSticky(element) {
     if (!isInViewport && !hamShow ) {  
         // The element is not in the viewport, so add the "sticky" class to make it sticky
         
-        $(element).addClass("sticky"); 
+        $(element).addClass("sticky").addClass("sticky-reveal"); 
         hamShow = true;
         let i = 0;
         //loop that loops for approx 2 seconds if not hovering on popup and infinitely if hovering and then when finished removes popup 
@@ -233,8 +233,16 @@ function makeSticky(element) {
                     i += 250;
                     hoverLoop();
                 } else {
-                    element.classList.remove("sticky"); 
-                    hamShow = false;
+                    element.classList.remove("sticky-reveal");
+                    if (window.pageYOffset > 100) {
+                        setTimeout(function() {
+                            element.classList.remove("sticky"); 
+                            hamShow = false;
+                        }, 500);
+                    } else {
+                        element.classList.remove("sticky"); 
+                        hamShow = false;
+                    }
                 }
             }, 250);
         }

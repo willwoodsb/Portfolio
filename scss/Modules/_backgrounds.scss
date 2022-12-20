@@ -1,28 +1,56 @@
 // --------------------------------------------------------------------------
 // Backgrounds --------------------------------------------------------------
 // --------------------------------------------------------------------------
-#water {
-    background-image: url("../img/background.jpg"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-    background-attachment: fixed;
+.water {
+    &__header {
+        background-image: url("../img/background.jpg"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+    }
+    &__footer {
+        background-image: url("../img/background.jpg"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+    }
+    
 }
-#scs {
-    background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+.scs {
+    &__header {
+        background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+    }
+    &__footer {
+        background-image: url("../img/home-oaVs.webp"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+    }
 }
-#coding {
-    background-position: left;
-    background-image: url("../img/coding.png"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+.coding {
+    &__header {
+        background-image: url("../img/coding.png"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-position: left;
+        background-attachment: fixed;
+    }
+    &__footer {
+        background-image: url("../img/coding.png"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+        background-position: left;
+    }
 }
-#about-me {
-    background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+.about-me {
+    &__header {
+        background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+    }
+    &__footer {
+        background-image: url("../img/about-me-back.JPG"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
+        background-attachment: fixed;
+    }
 }
-#water, #about-me, #scs {
+.water, .about-me, .scs {
     background-position: center;
 }
 
 .background-image {
     
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat: repeat-y;
     background-blend-mode: multiply;
     background-size: cover;
     border-bottom: 2px solid $midnight;

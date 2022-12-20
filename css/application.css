@@ -406,12 +406,18 @@ hr {
     color: #08080a;
     text-decoration: none; }
 
+footer {
+  margin-top: 50px; }
+
 .form {
   display: grid;
   grid-template-rows: auto;
   grid-column-gap: 50px;
-  grid-row-gap: 30px;
-  padding: 0px 0 110px; }
+  grid-row-gap: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #FFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
   .form h3 {
     font-size: 1.25em;
     font-weight: 700; }
@@ -539,26 +545,45 @@ hr {
     font-weight: 900;
     font-style: italic; }
 
-#water {
+.coding-examples {
+  width: 100%;
+  margin-top: 20px; }
+
+.water__header {
   background-image: url("../img/background.jpg"), linear-gradient(to bottom, #5c6e83, #ced5dd);
   background-attachment: fixed; }
+.water__footer {
+  background-image: url("../img/background.jpg"), linear-gradient(to top, #5c6e83, #ced5dd);
+  background-attachment: fixed; }
 
-#scs {
-  background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
+.scs__header {
+  background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, #5c6e83, #ced5dd);
+  background-attachment: fixed; }
+.scs__footer {
+  background-image: url("../img/home-oaVs.webp"), linear-gradient(to top, #5c6e83, #ced5dd);
+  background-attachment: fixed; }
 
-#coding {
+.coding__header {
+  background-image: url("../img/coding.png"), linear-gradient(to bottom, #5c6e83, #ced5dd);
   background-position: left;
-  background-image: url("../img/coding.png"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
+  background-attachment: fixed; }
+.coding__footer {
+  background-image: url("../img/coding.png"), linear-gradient(to top, #5c6e83, #ced5dd);
+  background-attachment: fixed;
+  background-position: left; }
 
-#about-me {
-  background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
+.about-me__header {
+  background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, #5c6e83, #ced5dd);
+  background-attachment: fixed; }
+.about-me__footer {
+  background-image: url("../img/about-me-back.JPG"), linear-gradient(to top, #5c6e83, #ced5dd);
+  background-attachment: fixed; }
 
-#water, #about-me, #scs {
+.water, .about-me, .scs {
   background-position: center; }
 
 .background-image {
-  background-repeat: no-repeat;
-  background-position: center;
+  background-repeat: repeat-y;
   background-blend-mode: multiply;
   background-size: cover;
   border-bottom: 2px solid #333645;
@@ -637,9 +662,14 @@ body {
 .sticky {
   position: fixed;
   display: none;
-  top: 0;
+  top: -80px;
   width: 100%;
-  width: inherit; }
+  width: inherit;
+  transition: ease .5s; }
+
+.sticky-reveal {
+  transform: translate(0, 80px);
+  transition: ease .5s; }
 
 .scroll {
   display: block; }
@@ -662,8 +692,10 @@ footer {
   footer .scroll {
     font-size: 1.25em;
     font-weight: 700;
-    color: #333645;
-    text-align: center; }
+    color: #FFF;
+    text-align: center;
+    padding: 70px 0 0;
+    text-shadow: 0 0 10px black; }
     footer .scroll span::after {
       content: "\ea41"; }
 

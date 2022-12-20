@@ -19,12 +19,6 @@
             content: "\ea43";
         }
         
-        // @media (min-width: 300px) and (min-height: 600px) {
-        //     margin-top: 25vh;
-        // }
-        // @include mq(large) {
-        //     margin-top: 30vh;
-        // }
     }
 }
 
@@ -32,8 +26,10 @@ footer {
     .scroll {
         font-size: em(20px);
         font-weight: $font-weight--bold;
-        color: $midnight;
+        color: $white;
         text-align: center;
+        padding: 70px 0 0;
+        text-shadow: 0 0 10px rgba(0,0,0,1);
         span::after {
             content: "\ea41";
         }

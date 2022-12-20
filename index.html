@@ -35,10 +35,10 @@
         </section>
 
         <!-- Content div -->
-        <div class="body__item main" id="main">
+        <div class="body__item main white" id="main">
 
           <!-- Header -->
-          <header class="background-image" id="water">
+          <header class="background-image water__header water">
             <!-- Main title section -->
             <section class="title-section width" id="index-title">
               <div id="title">
@@ -132,7 +132,7 @@
                     <textarea class="" id="message" name="message" placeholder="Message" required></textarea>
                     <p class="error">Please enter a message</p>
                   </div>
-                  <input type="submit" class="form__col--child" value="Submit" onclick="validateForm(document.myForm.email)">
+                  <input type="submit" class="form__col--child" value="Send Message" onclick="validateForm(document.myForm.email)">
                 </form>
               </div>
             </section>
@@ -141,11 +141,14 @@
 
           </main>
 
-          <footer>
+          <footer class="background-image water__footer">
+
             <a href="#portfolio" class="scroll">
               <span class="icon"></span>
               <p>Back To Top</p>
             </a>
+
+            
           </footer>
         </div>
       </div>  

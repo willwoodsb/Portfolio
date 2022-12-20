@@ -59,10 +59,15 @@
 .sticky {
     position: fixed; 
     display: none;
-    top: 0;
+    top: -80px;
     width: 100%;
     width: inherit;
-  }
+    transition: ease .5s;
+}
+.sticky-reveal {
+    transform: translate(0, 80px);
+    transition: ease .5s;
+}
 
 
 
