@@ -73,7 +73,7 @@ $(document).ready(function() {
             // $('#index-nav').css('width', '').css('visibility', '');
             // $('#index-nav').children().css('width', '');
         }, 5500);
-    }, 1000);
+    }, 1500);
 });
 
 
