@@ -47,21 +47,117 @@
           <main class="white">
             <section class="width aux-text">
               <h2>Sass Loop</h2>
-              <img src="img/coding-example-sass-loop.png" alt="Sass Loop Example" class="coding-examples">
+              <pre class="prettyprint">
+// loop to assign hover colors and icons to each nav section
+
+@each $theme, $icon in $theme-icons {
+    .#{$theme} {
+        &__icon {
+            color: map-get($theme-colors, $theme);
+            &::before {
+                content: $icon;
+            }
+        }
+        &:hover {
+            background-color: map-get($theme-colors, $theme);
+            .triangle {
+                background-color: map-get($theme-colors, $theme);
+            }
+            .menu-popup {
+                background-color: darken(map-get($theme-colors, $theme), 10%);
+            }
+        }
+    }
+}
+              </pre>
               <p>This loop, written in Sass, defines the theme colours of the nav bar in <a href="https://willwoodsb.github.io/HTML-and-CSS-Reflection/" target="_blank">my recreation<span class="icon"></span></a> of the <a href="https://www.netmatters.co.uk/" target="_blank">Netmatters homepage<span class="icon"></span></a>.
               It does so by accessing theme colours defined in a Sass map in the _config file, allowing someone to easily modify these colours should they desire. 
               Using a loop to do this rather than individually coding each item adheres to the Don't Repeat Yourself, (DRY), principle which is general coding best practice.</p>
             
-              <h2>Javascript Menu Icon</h2>
-              <img src="img/menu-icon.png" alt="Javascript Function" class="coding-examples">
+              <h2>Javascript Sticky Menu Icon</h2>
+              <pre class="prettyprint">
+//scroll event listener
+window.addEventListener("scroll", function() {
+    // Call the makeSticky function  
+    makeSticky(document.querySelector('.hamburger-container')); 
+});
+
+//make an element stick when scrolling
+function makeSticky(element) {
+    // Get the position of the element 
+    const position = element.getBoundingClientRect();
+
+    // Check if the element is in the viewport  
+    const isInViewport = (position.top > -100 && $(element).css('position') !== 'fixed');
+
+    if (!isInViewport && !hamShow ) {  
+        // The element is not in the viewport, so add the "sticky" class to make it sticky
+        
+        $(element).addClass("sticky").addClass("sticky-reveal"); 
+        hamShow = true;
+        let i = 0;
+        //loop that loops for approx 2 seconds if not hovering on popup and infinitely if hovering and then when finished removes popup 
+        function hoverLoop() {
+            setTimeout(() => {
+                if (isHovering(element) && i <= 2000) {
+                    i = 0;
+                    hoverLoop();
+                } else if (!isHovering || i <= 2000) {
+                    i += 250;
+                    hoverLoop();
+                } else {
+                    element.classList.remove("sticky-reveal");
+                    if (window.pageYOffset > 100) {
+                        setTimeout(function() {
+                            element.classList.remove("sticky"); 
+                            hamShow = false;
+                        }, 500);
+                    } else {
+                        element.classList.remove("sticky"); 
+                        hamShow = false;
+                    }
+                }
+            }, 250);
+        }
+        
+        hoverLoop();
+
+    } else if (isInViewport && hamShow ) {
+        // The element is in the viewport, so remove the "sticky" class
+        element.classList.remove("sticky"); 
+        hamShow = false; 
+    } 
+}
+  
+//test id the user is hovering over an element
+function isHovering(element) {
+
+    // Get the element's position  
+    const position = element.getBoundingClientRect();
+
+    // Get the mouse position 
+    const mouseX = mousePos[0];  
+    const mouseY = mousePos[1];
+    // Check if the mouse position is within the element's position
+    if (mouseX >= position.left && mouseX <= position.right && mouseY >= position.top && mouseY <= position.bottom) { 
+        return true;
+    } else { 
+        return false;  
+
+    }  
+
+}
+              </pre>
               <p>This Javascript function is taken from this website and causes the menu pop-out icon to appear and dissapear as the user scrolls
                 It accomplishes this by adding a CSS class to the hamburger element when the user has scrolled it out of viewport which brings it back into viewport.
-                The icon will appear for two seconds before dissapearing again, unless the user is hovering on the item.
+                The icon will appear for two seconds before dissapearing again, unless the user is hovering on the item (which is tested for using the isHovering() function).
+                The makeSticky() function is then called in an event listener which watches for user scroll input.
+                I purposely kept these functions non-specific to the element they are applied to so that I can use them in future projects without having to adapt them.
               </p>
             </section>
 
           </main>
-          <footer class="background-image coding__footer coding">
+          <footer class="background-image water__footer coding">
             <a href="#coding-top" class="scroll">
               <span class="icon"></span>
               <p>Back To Top</p>
@@ -83,6 +179,7 @@
     </script>
     <script src="animsition/animsition.min.js"></script>
     <script src="text-effect/selfw.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="js/app.js"></script>  
   </body>
 </html>

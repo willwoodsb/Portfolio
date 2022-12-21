@@ -545,9 +545,9 @@ footer {
     font-weight: 900;
     font-style: italic; }
 
-.coding-examples {
-  width: 100%;
-  margin-top: 20px; }
+pre {
+  margin-top: 25px;
+  margin-bottom: 25px; }
 
 .water__header {
   background-image: url("../img/background.jpg"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
@@ -556,20 +556,13 @@ footer {
 
 .scs__header {
   background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
-.scs__footer {
-  background-image: url("../img/home-oaVs.webp"), linear-gradient(to top, #5c6e83, #ced5dd); }
 
 .coding__header {
   background-image: url("../img/coding.png"), linear-gradient(to bottom, #5c6e83, #ced5dd);
   background-position: left; }
-.coding__footer {
-  background-image: url("../img/coding.png"), linear-gradient(to top, #5c6e83, #ced5dd);
-  background-position: left; }
 
 .about-me__header {
   background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
-.about-me__footer {
-  background-image: url("../img/about-me-back.JPG"), linear-gradient(to top, #5c6e83, #ced5dd); }
 
 .water, .about-me, .scs {
   background-position: center; }
