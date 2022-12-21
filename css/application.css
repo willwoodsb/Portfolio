@@ -546,8 +546,8 @@ footer {
     font-style: italic; }
 
 pre {
-  margin-top: 25px;
-  margin-bottom: 25px; }
+  margin: 25px 0;
+  width: 100%; }
 
 .water__header {
   background-image: url("../img/background.jpg"), linear-gradient(to bottom, #5c6e83, #ced5dd); }
@@ -581,7 +581,8 @@ body {
   background-color: #FFF; }
 
 .width {
-  margin: 0 25px; }
+  margin: 0 25px;
+  max-width: calc(100vw - 50px); }
   @media screen and (min-width: 768px) {
     .width {
       max-width: 520px;

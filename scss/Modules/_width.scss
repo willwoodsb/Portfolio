@@ -4,6 +4,7 @@
 
 .width {
     margin: 0 25px;
+    max-width: calc(100vw - 50px);
     @include mq(large) {
         max-width: 520px;
         @include auto-mg-hor;
