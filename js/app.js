@@ -110,7 +110,6 @@ input.on('change', function (event) {
 });
 
 function submitForm(userInput){
-    console.log(!!userInput.fname.value);
     if(validateEmail(userInput.email) && !!userInput.fname.value && !!userInput.lname.value && !!userInput.message.value) {
         alert('Your message has been submitted, thank you for getting in touch!');
         
