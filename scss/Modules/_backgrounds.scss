@@ -4,44 +4,44 @@
 .water {
     &__header {
         background-image: url("../img/background.jpg"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
     &__footer {
         background-image: url("../img/background.jpg"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
     
 }
 .scs {
     &__header {
         background-image: url("../img/home-oaVs.webp"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
     &__footer {
         background-image: url("../img/home-oaVs.webp"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
 }
 .coding {
     &__header {
         background-image: url("../img/coding.png"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
         background-position: left;
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
     &__footer {
         background-image: url("../img/coding.png"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
         background-position: left;
     }
 }
 .about-me {
     &__header {
         background-image: url("../img/about-me-back.JPG"), linear-gradient(to bottom, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
     &__footer {
         background-image: url("../img/about-me-back.JPG"), linear-gradient(to top, darken($canary-wharf, 20%), lighten($canary-wharf, 20%));
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
 }
 .water, .about-me, .scs {
