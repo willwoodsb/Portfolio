@@ -115,7 +115,7 @@
                 <h3>willwoodsb@gmail.com</h3>
               </div>
               <div class="form__col">
-                <form method="post" name="myForm">
+                <form method="post" name="myForm" action="#">
                   <div class="form__col--child">
                     <input type="text" class="" id="fname" name="fname" placeholder="First Name" required>
                     <p class="error">Please enter your first name</p>
@@ -132,7 +132,7 @@
                     <textarea class="" id="message" name="message" placeholder="Message" required></textarea>
                     <p class="error">Please enter a message</p>
                   </div>
-                  <input type="submit" class="form__col--child" value="Send Message" onclick="validateForm(document.myForm.email)">
+                  <input type="submit" class="form__col--child" value="Send Message" onclick="submitForm(document.myForm)">
                 </form>
               </div>
             </section>
